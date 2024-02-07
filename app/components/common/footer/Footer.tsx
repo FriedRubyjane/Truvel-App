@@ -1,7 +1,12 @@
 import { useRouter } from 'next/router'
 import styles from './Footer.module.scss'
 
-const navItems = [
+type TypeNavItem = {
+	icon: string
+	link: string
+}
+
+const navItems: TypeNavItem[] = [
 	{
 		link: '/',
 		icon: 'home',
@@ -11,7 +16,7 @@ const navItems = [
 		icon: 'explore',
 	},
 	{
-		link: '/place',
+		link: '/place/kyoto',
 		icon: 'place',
 	},
 	{
