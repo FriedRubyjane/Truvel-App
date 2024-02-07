@@ -6,7 +6,7 @@ const cities = [
 		location: 'Париж',
 	},
 	{
-		location: 'Бора бора',
+		location: 'Бора Бора',
 	},
 	{
 		location: 'Мауи',
