@@ -1,4 +1,4 @@
-type TypeLocation = {
+export type TypeLocation = {
 	city: string
 	country: string
 }
@@ -13,4 +13,9 @@ export interface IPlace {
 	distance: number
 	googleMapLink: string
 	mapImage: string
+}
+
+export interface IFavorites {
+	slug: string
+	name: string
 }
