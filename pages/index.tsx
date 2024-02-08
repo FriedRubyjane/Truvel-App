@@ -1,10 +1,10 @@
 import { GetStaticProps, NextPage } from 'next'
-import Layout from '../app/components/common/Layout'
-import { IPlace } from '../app/types/place'
-import HeadingSection from '../app/components/elements/home/headingSection/HeadingSection'
-import Search from '../app/components/elements/search/Search'
-import Filters from '../app/components/elements/filters/Filters'
-import PopularPlaces from '../app/components/elements/home/popularPlaces/PopularPlaces'
+import Layout from '@/common/Layout'
+import { IPlace } from '@/types/place'
+import HeadingSection from '@/elements/home/headingSection/HeadingSection'
+import Search from '@/elements/search/Search'
+import Filters from '@/elements/filters/Filters'
+import PopularPlaces from '@/elements/home/popularPlaces/PopularPlaces'
 import { useState } from 'react'
 
 interface IHome {

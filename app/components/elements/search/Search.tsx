@@ -1,7 +1,7 @@
 import { FC, useState, ChangeEvent } from 'react'
 import styles from './Search.module.scss'
-import { IPlace } from '../../../types/place'
-import { TypeSetState } from '../../../types/common'
+import { IPlace } from '@/types/place'
+import { TypeSetState } from '@/types/common'
 
 interface ISearch {
 	setPlaces: TypeSetState<IPlace[]>

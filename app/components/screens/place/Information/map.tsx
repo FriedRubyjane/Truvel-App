@@ -6,7 +6,7 @@ import {
 	Geography,
 	ZoomableGroup,
 } from 'react-simple-maps'
-import { TypeLocation } from '../../../../types/place'
+import { TypeLocation } from '@/types/place'
 
 const Map: FC<{ location: TypeLocation }> = ({ location }) => {
 	const geoUrl = '/geoMap/custom.json'

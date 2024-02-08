@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { BsBookmarkStar } from 'react-icons/bs'
 import Link from 'next/link'
 import styles from './Header.module.scss'
-import { IFavorites } from '../../../../types/place'
+import { IFavorites } from '@/types/place'
 
 const data: IFavorites[] = [
 	{

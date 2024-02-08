@@ -1,4 +1,4 @@
-import Layout from "../app/components/common/Layout"
+import Layout from '@/components/common/Layout'
 
 const Explore = () => {
 	return <Layout>Explore</Layout>

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { IPlace } from '../../../types/place'
-import Layout from '../../common/Layout'
+import { IPlace } from '@/types/place'
+import Layout from '@/common/Layout'
 import BookTrip from './BookTrip/booktrip'
 import Information from './Information/information'
 import Header from './Heading/header'

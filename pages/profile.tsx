@@ -1,9 +1,7 @@
-import Layout from "../app/components/common/Layout"
+import Layout from '@/components/common/Layout'
 
 const Profile = () => {
-  return (
-	 <Layout>Profile</Layout>
-  )
+	return <Layout>Profile</Layout>
 }
 
 export default Profile
