@@ -1,0 +1,58 @@
+@import '../../../../assets/styles/variables';
+
+.wrapper {
+	position: relative;
+
+	.input {
+		@include glassEffect;
+
+		transition: border 0.4s ease;
+
+		border: 1px solid transparent;
+		outline: none;
+
+		color: $white;
+
+		border-radius: 30px;
+		width: 80%;
+		font-size: 15px;
+
+		padding: 1rem;
+		margin: 0 auto 1rem;
+		margin-top: 1.5rem;
+
+		display: flex;
+		align-items: center;
+
+		&:focus {
+			border-color: rgba($accent, 0.5);
+		}
+
+		&::placeholder {
+			color: #515054;
+		}
+	}
+
+	.error {
+		color: red;
+
+		position: absolute;
+		bottom: -19px;
+		left: 0;
+	}
+}
+
+.changeType {
+	text-align: center;
+
+	> button {
+		color: $white;
+	}
+}
+
+.h1 {
+	font-size: 1.7em;
+	color: $white;
+	text-align: center;
+	padding: 3rem 0;
+}

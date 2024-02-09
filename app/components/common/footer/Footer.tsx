@@ -20,7 +20,7 @@ const navItems: TypeNavItem[] = [
 		icon: 'place',
 	},
 	{
-		link: '/profile',
+		link: '/auth',
 		icon: 'person_outline',
 	},
 ]
