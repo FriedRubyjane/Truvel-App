@@ -3,8 +3,14 @@ export type TypeLocation = {
 	country: string
 }
 
+export type TypeSlug = {
+	type: string
+	current: string
+}
+
 export interface IPlace {
-	slug: string
+	id: string
+	slug: TypeSlug
 	location: TypeLocation
 	imagePath: string
 	description: string
@@ -12,7 +18,6 @@ export interface IPlace {
 	duration: string
 	distance: number
 	googleMapLink: string
-	mapImage: string
 }
 
 export interface IFavorites {

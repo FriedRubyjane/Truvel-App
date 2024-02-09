@@ -5,7 +5,7 @@ const HeadingSection: FC = () => {
 	return (
 		<section
 			className={styles.section}
-			style={{ backgroundImage: `url('/placesImg/map.png')` }}
+			style={{ backgroundImage: `url('/map.png')` }}
 		>
 			<div>
 				<h1>Лучшие Места Для Поездки</h1>

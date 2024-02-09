@@ -6,6 +6,9 @@ import Search from '@/elements/search/Search'
 import Filters from '@/elements/filters/Filters'
 import PopularPlaces from '@/elements/home/popularPlaces/PopularPlaces'
 import { useState } from 'react'
+import Meta from 'utils/meta'
+import { sanityClient } from '../app/sanity'
+import { queries } from 'queries'
 
 interface IHome {
 	initialPlaces: IPlace[]
@@ -17,6 +20,7 @@ const Home: NextPage<IHome> = ({ initialPlaces }) => {
 
 	return (
 		<Layout>
+			<Meta title='Truvel App' description='Лучшие маршруты для поездки' />
 			<HeadingSection />
 			<div style={{ width: '80%', margin: '0 auto' }}>
 				<Search
@@ -32,12 +36,11 @@ const Home: NextPage<IHome> = ({ initialPlaces }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const result = await fetch(`${process.env.SERVER_URL}api/places`)
-	const initialPlaces = await result.json()
+	const result = await sanityClient.fetch(queries.getPlaces)
 
 	return {
 		props: {
-			initialPlaces,
+			initialPlaces: result,
 		},
 	}
 }

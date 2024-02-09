@@ -1,11 +1,12 @@
 @import '../../../../assets/styles/variables';
 
 .footer {
+	@include glassEffect;
+
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba(15, 15, 16, 0.97);
 	z-index: 10;
 
 	> nav {

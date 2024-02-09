@@ -26,8 +26,10 @@
 			"@/elements/*": ["components/elements/*"],
 
 			"@/types/*": ["types/*"],
-			"@/assets/*": ["../assets/*"]
-		}
+			"@/assets/*": ["../assets/*"],
+			"@lib/*": ["./lib/*"]
+		},
+		"target": "ES2017"
 	},
 	"include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
