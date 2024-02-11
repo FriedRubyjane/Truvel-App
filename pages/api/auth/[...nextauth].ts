@@ -1,6 +1,6 @@
 import NextAuth, { NextAuthOptions } from 'next-auth'
 import { SanityAdapter, SanityCredentials } from 'next-auth-sanity'
-import { sanityClient } from '../../../app/sanity'
+import { sanityClient } from '../../../app/CreateClient'
 
 const options: NextAuthOptions = {
 	providers: [SanityCredentials(sanityClient)],

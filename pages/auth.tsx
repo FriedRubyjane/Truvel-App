@@ -1,4 +1,4 @@
-import Auth from '@/components/screens/auth/auth'
+import Auth from '@/components/screens/auth/Auth'
 
 const AuthPage = () => {
 	return <Auth />

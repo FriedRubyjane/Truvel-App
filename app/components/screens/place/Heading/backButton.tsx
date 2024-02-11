@@ -7,7 +7,7 @@ const BackButton: FC = () => {
 	return (
 		<Link href='/'>
 			<span className={styles.buttonWrapper}>
-				<BsChevronLeft size={20} color='#e8e8e8' />
+				<BsChevronLeft size={20} />
 			</span>
 		</Link>
 	)

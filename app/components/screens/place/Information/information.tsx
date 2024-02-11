@@ -2,8 +2,8 @@ import { FC } from 'react'
 import { FaCalendar, FaMapMarkerAlt, FaStar } from 'react-icons/fa'
 import { IPlace } from '@/types/place'
 import styles from './Information.module.scss'
-import Map from './map'
-import { PortableText } from '../../../../sanity'
+import Map from './Map'
+import { PortableText } from '../../../../CreateClient'
 
 const Information: FC<{ place: IPlace }> = ({ place }) => {
 	return (
@@ -12,7 +12,9 @@ const Information: FC<{ place: IPlace }> = ({ place }) => {
 				<FaMapMarkerAlt color='#e8e8e8' size={20} />
 				<h1>{place.location.city + ', ' + place.location.country}</h1>
 			</div>
-			<p>{<PortableText value={place.description} />}</p>
+			<span className={styles.p}>
+				{<PortableText value={place.description} />}
+			</span>
 			<div className={styles.additional}>
 				<div className={styles.rating}>
 					<FaStar color='#FDAE32' size={18} className={styles.star} />

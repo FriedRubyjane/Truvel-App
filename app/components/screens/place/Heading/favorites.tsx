@@ -1,39 +1,18 @@
-import React, { FC, useState } from 'react'
-import { BsBookmarkStar } from 'react-icons/bs'
-import Link from 'next/link'
+import React, { FC } from 'react'
 import styles from './Header.module.scss'
-import { IFavorites } from '@/types/place'
+import { TbHeartPlus } from 'react-icons/tb'
+import { TbHeartMinus } from 'react-icons/tb'
 
-const data: IFavorites[] = [
-	{
-		name: 'Япония',
-		slug: 'kyoto',
-	},
-	{
-		name: 'Италия',
-		slug: 'venezia',
-	},
-]
+const isAdded = false
 
 const Favorites: FC = () => {
-	const [isOpen, setIsOpen] = useState(false)
-
 	return (
 		<div className={styles.bookMark}>
-			<button onClick={() => setIsOpen(!isOpen)}>
+			<button onClick={() => {}}>
 				<span className={styles.buttonWrapper}>
-					<BsBookmarkStar size={20} color='#e8e8e8' />
+					{isAdded ? <TbHeartMinus size={25} /> : <TbHeartPlus size={25} />}
 				</span>
 			</button>
-			{isOpen && (
-				<ul>
-					{data.map(favorite => (
-						<li key={favorite.slug}>
-							<Link href={`/place/${favorite.slug}`}>{favorite.name}</Link>
-						</li>
-					))}
-				</ul>
-			)}
 		</div>
 	)
 }

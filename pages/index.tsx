@@ -7,7 +7,7 @@ import Filters from '@/elements/filters/Filters'
 import PopularPlaces from '@/elements/home/popularPlaces/PopularPlaces'
 import { useState } from 'react'
 import Meta from 'utils/meta'
-import { sanityClient } from '../app/sanity'
+import { sanityClient } from '../app/CreateClient'
 import { queries } from 'queries'
 
 interface IHome {

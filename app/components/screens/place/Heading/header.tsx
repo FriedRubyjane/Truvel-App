@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import Favorites from './favorites'
-import BackButton from './backButton'
+import Favorites from './Favorites'
+import BackButton from './BackButton'
 import styles from './Header.module.scss'
 
 const Header: FC = () => {

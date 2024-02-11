@@ -45,7 +45,7 @@ export default {
 			name: 'rating',
 			title: 'Rating',
 			type: 'number',
-			validation: Rule => Rule.required().positive().max(10),
+			validation: Rule => Rule.required().positive().max(5),
 		},
 		{
 			name: 'duration',

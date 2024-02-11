@@ -16,6 +16,7 @@ const Layout: FC<PropsWithChildren<ILayoutProps>> = ({
 			>
 				{children}
 			</div>
+
 			<Footer />
 		</div>
 	)

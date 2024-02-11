@@ -1,9 +1,14 @@
 import NextProgressBar from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import '@/assets/styles/globals.css'
+import '@/assets/styles/globals.scss'
+import { SessionProvider } from 'next-auth/react'
+import AuthProvider from 'providers/AuthProvider/AuthProvider'
 
-export default function App({ Component, pageProps }) {
+export default function App({
+	Component,
+	pageProps: { session, ...pageProps },
+}) {
 	return (
 		<>
 			<NextProgressBar
@@ -12,8 +17,12 @@ export default function App({ Component, pageProps }) {
 				stopDelayMs={200}
 				height={3}
 			/>
-			<Component {...pageProps} />
-			<ToastContainer theme='dark' draggable={false} />
+			<SessionProvider session={session}>
+				<AuthProvider Component={Component}>
+					<Component {...pageProps} />
+					<ToastContainer theme='dark' draggable={false} />
+				</AuthProvider>
+			</SessionProvider>
 		</>
 	)
 }

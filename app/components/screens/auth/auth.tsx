@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import Layout from '@/components/common/Layout'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { IAuthFields } from './auth.interface'
+import { IAuthFields } from './Auth.interface'
 import { IoPersonSharp } from 'react-icons/io5'
 import { toast } from 'react-toastify'
 
@@ -10,6 +10,7 @@ import { signUp } from 'next-auth-sanity/client'
 
 import stylesButton from '../place/BookTrip/BookTrip.module.scss'
 import styles from './Auth.module.scss'
+import { useRouter } from 'next/router'
 
 const Auth: FC = () => {
 	const [typeForm, setTypeForm] = useState<'login' | 'register'>('login')
@@ -23,6 +24,8 @@ const Auth: FC = () => {
 	})
 
 	const isRegister = typeForm === 'register'
+
+	const { push } = useRouter()
 
 	const onSubmit: SubmitHandler<IAuthFields> = async data => {
 		if (isRegister) {
@@ -43,27 +46,19 @@ const Auth: FC = () => {
 			if (response.error) {
 				// @ts-ignore
 				toast.error(response.error)
+				return
 			}
+
+			await push('/')
 		}
 	}
 
 	return (
 		<Layout>
-			<h1 className={styles.h1}>
+			<h1 className='h1'>
 				{isRegister ? 'Регистрация аккаунта' : 'Вход в аккаунт'}
 			</h1>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<div className={styles.wrapper}>
-					<input
-						{...register('name', { required: 'Не верное имя пользователя' })}
-						type='text'
-						placeholder='Введите имя'
-						className={styles.input}
-					/>
-					{errors.email && (
-						<div className={styles.error}>{errors.name?.message}</div>
-					)}
-				</div>
 				<div className={styles.wrapper}>
 					<input
 						{...register('email', { required: 'Введите правильный email' })}
@@ -89,14 +84,7 @@ const Auth: FC = () => {
 					)}
 				</div>
 				<div>
-					<div className={styles.changeType}>
-						<button
-							onClick={() => setTypeForm(isRegister ? 'login' : 'register')}
-						>
-							Я хочу {isRegister ? ' войти' : ' зарегистрироваться'}
-						</button>
-					</div>
-					<button className={stylesButton.button}>
+					<button className={stylesButton.button} type='submit'>
 						<span className={stylesButton.text}>
 							{isRegister ? 'Зарегистрироваться' : 'Войти'}
 						</span>
@@ -106,6 +94,11 @@ const Auth: FC = () => {
 					</button>
 				</div>
 			</form>
+			<div className={styles.changeType}>
+				<button onClick={() => setTypeForm(isRegister ? 'login' : 'register')}>
+					Я хочу {isRegister ? ' войти' : ' зарегистрироваться'}
+				</button>
+			</div>
 		</Layout>
 	)
 }
