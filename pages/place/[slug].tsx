@@ -1,7 +1,8 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import React from 'react'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { IPlace } from '@/types/place'
-import Place from '@/components/screens/place/Place'
+
+import Place from '@/screens/place/Place'
 import { sanityClient } from '../../app/CreateClient'
 import { queries } from 'queries'
 
@@ -16,7 +17,9 @@ const PlacePage: NextPage<IPlacePage> = ({ place }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
 	const result = await sanityClient.fetch(`${queries.getPlaces}{slug}`)
 
-	const paths = result.map(place => ({ params: { slug: place.slug.current } }))
+	const paths = result.map(place => ({
+		params: { slug: place.slug.current },
+	}))
 
 	return { paths, fallback: 'blocking' }
 }

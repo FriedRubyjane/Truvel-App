@@ -9,17 +9,17 @@ export type TypeSlug = {
 }
 
 export interface IPlace {
-	id: string
+	_id: string
 	slug: TypeSlug
 	location: TypeLocation
 	imagePath: string
 	description: string
-	rating: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+	rating: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
 	duration: string
 	distance: number
 }
 
-export interface IFavorites {
+export interface IFav {
 	slug: string
 	name: string
 }

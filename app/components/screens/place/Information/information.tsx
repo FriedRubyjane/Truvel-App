@@ -12,9 +12,7 @@ const Information: FC<{ place: IPlace }> = ({ place }) => {
 				<FaMapMarkerAlt color='#e8e8e8' size={20} />
 				<h1>{place.location.city + ', ' + place.location.country}</h1>
 			</div>
-			<span className={styles.p}>
-				{<PortableText value={place.description} />}
-			</span>
+			<article>{<PortableText value={place.description} />}</article>
 			<div className={styles.additional}>
 				<div className={styles.rating}>
 					<FaStar color='#FDAE32' size={18} className={styles.star} />

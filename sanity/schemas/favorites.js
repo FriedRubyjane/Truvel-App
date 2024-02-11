@@ -25,7 +25,7 @@ export default {
 
 	preview: {
 		select: {
-			title: 'user.email',
+			title: 'email',
 		},
 	},
 }

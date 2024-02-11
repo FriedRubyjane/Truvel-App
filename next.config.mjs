@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-};
+	swcMinify: true,
+	reactStrictMode: true,
+	images: {
+		domains: ['cdn.sanity.io'],
+	},
+}
 
-export default nextConfig;
+export default nextConfig

@@ -25,9 +25,7 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
 					/>
 				</div>
 			) : places.length ? (
-				places.map(place => (
-					<PlaceItem key={place.slug.current} place={place} />
-				))
+				places.map(place => <PlaceItem key={place._id} place={place} />)
 			) : (
 				<div
 					style={{

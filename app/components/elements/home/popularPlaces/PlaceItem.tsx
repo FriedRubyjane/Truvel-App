@@ -12,7 +12,7 @@ const PlaceItem: FC<{
 	return (
 		<Link
 			href={`place/${place.slug.current}`}
-			key={place.slug.current}
+			key={place._id}
 			className={styles.item}
 			style={{ backgroundImage: `url(${urlFor(place.imagePath).url()})` }}
 		>
