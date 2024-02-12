@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo, FC } from 'react'
 import styles from './SearchSection.module.scss'
 
 const HeadingSection: FC = () => {
@@ -14,4 +14,4 @@ const HeadingSection: FC = () => {
 	)
 }
 
-export default HeadingSection
+export default memo(HeadingSection)

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useRouter } from 'next/router'
 import styles from './Footer.module.scss'
 import { signOut, useSession } from 'next-auth/react'
@@ -62,4 +63,4 @@ const Footer = () => {
 	)
 }
 
-export default Footer
+export default memo(Footer)

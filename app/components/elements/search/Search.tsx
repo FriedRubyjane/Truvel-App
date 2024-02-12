@@ -1,4 +1,4 @@
-import { FC, useState, ChangeEvent } from 'react'
+import { memo, FC, useState, ChangeEvent } from 'react'
 import styles from './Search.module.scss'
 import { IPlace } from '@/types/place'
 import { TypeSetState } from '@/types/common'
@@ -49,4 +49,4 @@ const Search: FC<ISearch> = ({ setPlaces, initialPlaces, setIsLoading }) => {
 	)
 }
 
-export default Search
+export default memo(Search)

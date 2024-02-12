@@ -14,7 +14,7 @@ interface IPlacePage {
 
 const Place: FC<IPlacePage> = ({ place }) => {
 	return (
-		<Layout isMaxWidth={false}>
+		<Layout>
 			<Meta
 				title={`${place.location.city} | ${place.location.country}`}
 				description={`Лучший маршрут для поездки - ${place.location.city}`}

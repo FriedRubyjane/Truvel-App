@@ -1,21 +1,10 @@
 import { FC, PropsWithChildren } from 'react'
 import Footer from './footer/Footer'
 
-interface ILayoutProps {
-	isMaxWidth?: boolean
-}
-
-const Layout: FC<PropsWithChildren<ILayoutProps>> = ({
-	isMaxWidth = true,
-	children,
-}) => {
+const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	return (
 		<div>
-			<div
-				style={{ maxWidth: isMaxWidth ? '480px' : 'none', margin: '0 auto' }}
-			>
-				{children}
-			</div>
+			<div style={{ maxWidth: '480px', margin: '0 auto' }}>{children}</div>
 
 			<Footer />
 		</div>
