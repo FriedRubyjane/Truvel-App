@@ -2,6 +2,7 @@ import { FC, useState, ChangeEvent } from 'react'
 import styles from './Search.module.scss'
 import { IPlace } from '@/types/place'
 import { TypeSetState } from '@/types/common'
+import { FaSearch } from 'react-icons/fa'
 
 interface ISearch {
 	setPlaces: TypeSetState<IPlace[]>
@@ -37,7 +38,7 @@ const Search: FC<ISearch> = ({ setPlaces, initialPlaces, setIsLoading }) => {
 
 	return (
 		<div className={styles.search}>
-			<span className='material-icons-outlined'>search</span>
+			<FaSearch />
 			<input
 				type='text'
 				onChange={searchHandler}

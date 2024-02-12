@@ -18,15 +18,15 @@
 		> button {
 			margin: 0 2rem;
 
-			> span {
-				transition: color;
+			> svg {
+				transition: color 0.4s ease;
 				font-size: 1.7rem;
 				color: $gray;
 			}
 
 			&:hover,
 			&.active {
-				> span {
+				> svg {
 					color: $accent;
 				}
 			}

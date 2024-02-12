@@ -3,7 +3,8 @@ import styles from './Footer.module.scss'
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { IconType } from 'react-icons'
-import { MdAccountCircle, MdHome, MdLogout } from 'react-icons/md'
+import { MdOutlinePersonOutline, MdLogout } from 'react-icons/md'
+import { TbHome } from 'react-icons/tb'
 import { TbHeart } from 'react-icons/tb'
 
 type TypeNavItem = {
@@ -14,7 +15,7 @@ type TypeNavItem = {
 const navItems: TypeNavItem[] = [
 	{
 		link: '/',
-		icon: MdHome,
+		icon: TbHome,
 	},
 	{
 		link: '/favorites',
@@ -22,7 +23,7 @@ const navItems: TypeNavItem[] = [
 	},
 	{
 		link: '/profile',
-		icon: MdAccountCircle,
+		icon: MdOutlinePersonOutline,
 	},
 	{
 		link: '/auth',
@@ -48,9 +49,7 @@ const Footer = () => {
 								item.link === '/auth' ? await signOut() : await push(item.link)
 							}}
 						>
-							<span>
-								<item.icon />
-							</span>
+							<item.icon />
 						</button>
 					))
 				) : (
