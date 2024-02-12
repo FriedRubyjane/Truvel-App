@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	return {
 		props: {
-			places: result,
+			places: [] /* result */,
 		},
 	}
 }

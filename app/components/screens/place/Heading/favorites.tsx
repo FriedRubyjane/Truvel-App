@@ -9,7 +9,7 @@ const Favorites: FC<{ _id: string }> = ({ _id }) => {
 
 	return (
 		<div className={styles.bookMark}>
-			<button onClick={toggleFavorite} disabled={isLoading}>
+			<button /* onClick={toggleFavorite} disabled={isLoading} */>
 				<span className={styles.buttonWrapper}>
 					{checkFavorite(_id) ? (
 						<TbHeartMinus size={25} />

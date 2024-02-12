@@ -30,6 +30,7 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
 				<div
 					style={{
 						marginTop: '-2rem',
+						textAlign: 'center',
 						color: '#e8e8e8',
 						opacity: '0.8',
 						fontStyle: 'italic',

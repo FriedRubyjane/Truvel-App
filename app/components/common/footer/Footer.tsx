@@ -3,12 +3,7 @@ import styles from './Footer.module.scss'
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { IconType } from 'react-icons'
-import {
-	MdAccountCircle,
-	MdHome,
-	MdLogout,
-	MdOutlineFavorite,
-} from 'react-icons/md'
+import { MdAccountCircle, MdHome, MdLogout } from 'react-icons/md'
 import { TbHeart } from 'react-icons/tb'
 
 type TypeNavItem = {

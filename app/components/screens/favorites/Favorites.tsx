@@ -25,6 +25,7 @@ const Favorites: FC<{ places: IPlace[] }> = ({ places }) => {
 					<div
 						style={{
 							marginTop: '-2rem',
+							textAlign: 'center',
 							color: '#e8e8e8',
 							opacity: '0.8',
 							fontStyle: 'italic',
