@@ -63,6 +63,7 @@ const Auth: FC = () => {
 					<input
 						{...register('email', { required: 'Введите правильный email' })}
 						type='text'
+						name='email'
 						placeholder='alex@gmail.com'
 						className={styles.input}
 					/>
@@ -76,6 +77,7 @@ const Auth: FC = () => {
 							required: 'Не верный пароль',
 						})}
 						type='password'
+						name='password'
 						placeholder='Пароль'
 						className={styles.input}
 					/>
@@ -84,7 +86,11 @@ const Auth: FC = () => {
 					)}
 				</div>
 				<div>
-					<button className={stylesButton.button} type='submit'>
+					<button
+						className={stylesButton.button}
+						type='submit'
+						aria-label={isRegister ? 'Зарегистрироваться' : 'Войти'}
+					>
 						<span className={stylesButton.text}>
 							{isRegister ? 'Зарегистрироваться' : 'Войти'}
 						</span>
@@ -95,7 +101,10 @@ const Auth: FC = () => {
 				</div>
 			</form>
 			<div className={styles.changeType}>
-				<button onClick={() => setTypeForm(isRegister ? 'login' : 'register')}>
+				<button
+					onClick={() => setTypeForm(isRegister ? 'login' : 'register')}
+					aria-label={`Я хочу ${isRegister ? ' войти' : ' зарегистрироваться'}`}
+				>
 					Я хочу {isRegister ? ' войти' : ' зарегистрироваться'}
 				</button>
 			</div>

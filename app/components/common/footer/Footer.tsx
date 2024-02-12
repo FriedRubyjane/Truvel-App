@@ -9,24 +9,29 @@ import { TbHome } from 'react-icons/tb'
 import { TbHeart } from 'react-icons/tb'
 
 type TypeNavItem = {
+	label: string
 	icon: IconType
 	link: string
 }
 
 const navItems: TypeNavItem[] = [
 	{
+		label: 'Меню',
 		link: '/',
 		icon: TbHome,
 	},
 	{
+		label: 'Избранное',
 		link: '/favorites',
 		icon: TbHeart,
 	},
 	{
+		label: 'Профиль',
 		link: '/profile',
 		icon: MdOutlinePersonOutline,
 	},
 	{
+		label: 'Авторизация',
 		link: '/auth',
 		icon: MdLogout,
 	},
@@ -44,6 +49,7 @@ const Footer = () => {
 				{data ? (
 					navItems.map(item => (
 						<button
+							aria-label={item.label}
 							className={pathname === item.link ? styles.active : ''}
 							key={item.link}
 							onClick={async () => {

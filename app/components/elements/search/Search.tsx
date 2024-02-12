@@ -41,6 +41,7 @@ const Search: FC<ISearch> = ({ setPlaces, initialPlaces, setIsLoading }) => {
 			<FaSearch />
 			<input
 				type='text'
+				name='search'
 				onChange={searchHandler}
 				value={searchTerm}
 				placeholder='Поиск места...'

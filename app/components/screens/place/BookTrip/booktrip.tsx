@@ -6,7 +6,11 @@ const BookTrip = () => {
 	const bookTrip = () => {}
 
 	return (
-		<button className={styles.button} onClick={bookTrip}>
+		<button
+			className={styles.button}
+			onClick={bookTrip}
+			aria-label='Забронировать поездку'
+		>
 			<span className={styles.text}>Забронировать поездку</span>
 			<span className={styles.icon}>
 				<HiOutlineArrowLongRight size={20} />

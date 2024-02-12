@@ -20,7 +20,7 @@ const PlaceItem: FC<{
 				{place.location.city + ', ' + place.location.country}
 			</span>
 			{removeHandler && (
-				<button onClick={removeHandler}>
+				<button onClick={removeHandler} aria-label='Удаление из избранного'>
 					<TbHeartMinus size={25} />
 				</button>
 			)}

@@ -9,7 +9,11 @@ const Favorites: FC<{ _id: string }> = ({ _id }) => {
 
 	return (
 		<div className={styles.bookMark}>
-			<button /* onClick={toggleFavorite} disabled={isLoading} */>
+			<button
+				aria-label={
+					checkFavorite(_id) ? 'Удалить из избранного' : 'Добавить в избранное'
+				} /* onClick={toggleFavorite} disabled={isLoading} */
+			>
 				<span className={styles.buttonWrapper}>
 					{checkFavorite(_id) ? (
 						<TbHeartMinus size={25} />
