@@ -16,6 +16,7 @@ export default function App({
 				startPosition={0.3}
 				stopDelayMs={200}
 				height={3}
+				showOnShallow={false}
 			/>
 			<SessionProvider session={session}>
 				<AuthProvider Component={Component}>
