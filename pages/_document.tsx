@@ -3,7 +3,10 @@ import { Head, Html, Main, NextScript } from 'next/document'
 export default function Document() {
 	return (
 		<Html lang='ru-Ru'>
-			<Head />
+			<Head>
+				<link rel='manifest' href='/manifest.json' />
+				<link rel='apple-touch-icon' href='/touch-icons/icon-512x512.png' />
+			</Head>
 			<body>
 				<Main />
 				<NextScript />

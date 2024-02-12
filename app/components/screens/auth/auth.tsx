@@ -29,13 +29,7 @@ const Auth: FC = () => {
 
 	const onSubmit: SubmitHandler<IAuthFields> = async data => {
 		if (isRegister) {
-			const response = await signUp(data)
-
-			// @ts-ignore
-			if (response.error) {
-				// @ts-ignore
-				toast.error(response.error)
-			}
+			await signUp(data)
 		} else {
 			const response = await signIn('sanity-login', {
 				redirect: false,
