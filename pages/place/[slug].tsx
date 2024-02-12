@@ -2,7 +2,7 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { IPlace } from '@/types/place'
 
-import Place from '@/screens/place/Place'
+import Place from '../../app/components/screens/place/Place'
 import { sanityClient } from '../../app/CreateClient'
 import { queries } from 'queries'
 
