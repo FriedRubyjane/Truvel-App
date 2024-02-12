@@ -5,11 +5,11 @@ import { TbHeartMinus } from 'react-icons/tb'
 import { useFavorites } from '../../favorites/useFavorites'
 
 const Favorites: FC<{ _id: string }> = ({ _id }) => {
-	const { checkFavorite } = useFavorites()
+	const { checkFavorite, toggleFavorite, isLoading } = useFavorites(_id)
 
 	return (
 		<div className={styles.bookMark}>
-			<button onClick={() => {}}>
+			<button onClick={toggleFavorite} disabled={isLoading}>
 				<span className={styles.buttonWrapper}>
 					{checkFavorite(_id) ? (
 						<TbHeartMinus size={25} />

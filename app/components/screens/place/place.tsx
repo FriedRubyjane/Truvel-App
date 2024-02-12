@@ -4,9 +4,9 @@ import Layout from '@/common/Layout'
 import BookTrip from './BookTrip/BookTrip'
 import Information from './Information/Information'
 import Header from './Heading/Header'
-import Wrapper from './Wrapper/Wrapper'
 import Meta from 'utils/meta'
 import { urlFor } from '../../../CreateClient'
+import Wrapper from './Wrapper/Wrapper'
 
 interface IPlacePage {
 	place: IPlace
