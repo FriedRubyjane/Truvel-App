@@ -12,6 +12,8 @@ const HeadingSection: FC = () => {
 					layout='fill'
 					objectPosition='top'
 					objectFit='cover'
+					quality={95}
+					priority
 				/>
 			</div>
 			<div>
