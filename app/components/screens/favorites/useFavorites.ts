@@ -54,7 +54,7 @@ export const useFavorites = (placeId: string) => {
 		} else {
 			await addToFavorites()
 		}
-	}, [currentFavoriteId])
+	}, [currentFavoriteId, placeId])
 
 	return useMemo(
 		() => ({
