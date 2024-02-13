@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { IPlace } from '@/types/place'
 import Layout from '@/common/Layout'
-import BookTrip from './BookTrip/BookTrip'
-import Information from './Information/Information'
-import Header from './Heading/Header'
+import BookTrip from './BookTrip/BookTrips'
+import Information from './Information/Informations'
+import Header from './Heading/Headers'
 import Meta from 'utils/meta'
 import { urlFor } from '../../../CreateClient'
-import Wrapper from './Wrapper/Wrapper'
+import Wrapper from './Wrapper/Wrappers'
 
 interface IPlacePage {
 	place: IPlace
