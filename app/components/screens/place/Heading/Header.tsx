@@ -1,6 +1,6 @@
 import { memo, FC } from 'react'
-import Favorites from './Favorites'
-import BackButton from './BackButton'
+import Favorites from './Favoritesttt'
+import BackButton from './BackButtonttt'
 import styles from './Header.module.scss'
 import { useSession } from 'next-auth/react'
 

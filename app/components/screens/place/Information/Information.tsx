@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { FaCalendar, FaMapMarkerAlt, FaStar } from 'react-icons/fa'
 import { IPlace } from '@/types/place'
 import styles from './Information.module.scss'
-import Map from './Map'
+import Map from './Mapttt'
 import { PortableText } from '../../../../CreateClient'
 
 const Information: FC<{ place: IPlace }> = ({ place }) => {
