@@ -15,8 +15,10 @@ const Wrapper: FC<PropsWithChildren<IWrapperProps>> = ({
 			style={{
 				backgroundImage: `url(${imagePath})`,
 				borderRadius: '20px',
-				width: '480px',
-				height: '420px',
+				maxWidth: '480px',
+				maxHeight: '420px',
+				width: '100%',
+				height: '100%',
 				margin: '0 auto',
 			}}
 		>

@@ -9,8 +9,10 @@
 		top: 0;
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.45);
-		width: 480px;
-		height: 420px;
+		max-width: 480px;
+		max-height: 420px;
+		width: 100%;
+		height: 100%;
 		border-radius: 20px;
 	}
 
