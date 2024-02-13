@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import Layout from '@/components/common/Layout'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { IAuthFields } from './Auth.interface'
+import { IAuthFields } from './Auths.interface'
 import { IoPersonSharp } from 'react-icons/io5'
 import { toast } from 'react-toastify'
 
