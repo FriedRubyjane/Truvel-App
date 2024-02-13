@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import Layout from '@/components/common/Layout'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IAuthFields } from './Auth.interface'
-import { IoPersonSharp } from 'react-icons/io5'
+import { MdAccountCircle } from 'react-icons/md'
 import { toast } from 'react-toastify'
 
 import { signIn } from 'next-auth/react'
@@ -89,7 +89,7 @@ const Auth: FC = () => {
 							{isRegister ? 'Зарегистрироваться' : 'Войти'}
 						</span>
 						<span className={stylesButton.icon}>
-							<IoPersonSharp size={18} />
+							<MdAccountCircle size={18} />
 						</span>
 					</button>
 				</div>
