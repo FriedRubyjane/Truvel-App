@@ -3,19 +3,15 @@ import styles from './BookTrip.module.scss'
 import { HiOutlineArrowLongRight } from 'react-icons/hi2'
 
 const BookTrip = () => {
-	const bookTrip = () => {}
-
 	return (
-		<button
-			className={styles.button}
-			onClick={bookTrip}
-			aria-label='Забронировать поездку'
-		>
-			<span className={styles.text}>Забронировать поездку</span>
-			<span className={styles.icon}>
-				<HiOutlineArrowLongRight size={20} />
-			</span>
-		</button>
+		<div className={styles.wrapper}>
+			<button className={styles.button} aria-label='Забронировать поездку'>
+				<span className={styles.text}>Забронировать поездку</span>
+				<span className={styles.icon}>
+					<HiOutlineArrowLongRight size={20} />
+				</span>
+			</button>
+		</div>
 	)
 }
 
