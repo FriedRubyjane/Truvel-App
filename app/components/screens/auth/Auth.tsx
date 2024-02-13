@@ -89,7 +89,7 @@ const Auth: FC = () => {
 							{isRegister ? 'Зарегистрироваться' : 'Войти'}
 						</span>
 						<span className={stylesButton.icon}>
-							<MdAccountCircle size={18} />
+							<MdAccountCircle size={24} />
 						</span>
 					</button>
 				</div>
