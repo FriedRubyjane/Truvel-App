@@ -79,7 +79,7 @@ const Auth: FC = () => {
 						<div className={styles.error}>{errors.password?.message}</div>
 					)}
 				</div>
-				<div>
+				<div className={stylesButton.wrapper}>
 					<button
 						className={stylesButton.button}
 						type='submit'

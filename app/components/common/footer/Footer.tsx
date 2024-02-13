@@ -60,7 +60,7 @@ const Footer = () => {
 						</button>
 					))
 				) : (
-					<Link className={styles['go-to-login']} href='auth'>
+					<Link className={styles['go-to-login']} href='/auth'>
 						Войти в приложение
 					</Link>
 				)}
