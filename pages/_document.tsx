@@ -5,6 +5,7 @@ export default function Document() {
 		<Html lang='ru-Ru'>
 			<Head>
 				<link rel='manifest' href='/manifest.json' />
+				<link rel='shortcut icon' href='/favicon.png' type='image/png' />
 				<link rel='apple-touch-icon' href='/touch-icons/icon-512x512.png' />
 			</Head>
 			<body>
