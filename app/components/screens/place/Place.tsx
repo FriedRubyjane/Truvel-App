@@ -24,6 +24,7 @@ const Place: FC<IPlacePage> = ({ place }) => {
 				<Header _id={place._id} />
 				<Information place={place} />
 				<BookTrip />
+				<div style={{ height: '3rem', marginTop: '3rem' }} />
 			</Wrapper>
 		</Layout>
 	)
