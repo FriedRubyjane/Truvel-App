@@ -1,4 +1,4 @@
-import Favorites from '@/components/screens/favorites/Favoritesttt'
+import Favorites from '@/components/screens/favorites/Favorites'
 import { GetStaticProps } from 'next'
 import { sanityClient } from '../app/CreateClient'
 import { queries } from '../app/queries'
