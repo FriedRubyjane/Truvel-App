@@ -1,8 +1,8 @@
-import { FC } from 'react'
 import Layout from '@/components/common/Layout'
 import PlaceItem from '@/components/elements/home/popularPlaces/PlaceItem'
-import Meta from 'utils/meta'
 import { IPlace } from '@/types/place'
+import { FC } from 'react'
+import Meta from 'utils/meta'
 
 const Favorites: FC<{ places: IPlace[] }> = ({ places }) => {
 	return (

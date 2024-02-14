@@ -1,10 +1,9 @@
-import React from 'react'
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { IPlace } from '@/types/place'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import Place from '@/components/screens/place/Place'
-import { sanityClient } from '../../app/CreateClient'
 import { queries } from 'queries'
+import { sanityClient } from '../../app/CreateClient'
 
 interface IPlacePage {
 	place: IPlace

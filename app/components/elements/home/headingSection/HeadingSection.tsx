@@ -1,6 +1,6 @@
-import { memo, FC } from 'react'
-import styles from './HeadingSection.module.scss'
 import Image from 'next/image'
+import { FC, memo } from 'react'
+import styles from './HeadingSection.module.scss'
 
 const HeadingSection: FC = () => {
 	return (

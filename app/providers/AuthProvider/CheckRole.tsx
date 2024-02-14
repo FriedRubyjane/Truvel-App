@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from 'react'
 import { TypeComponentAuthFields } from '@/types/auth'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import { FC, PropsWithChildren } from 'react'
 
 const CheckRole: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 	children,

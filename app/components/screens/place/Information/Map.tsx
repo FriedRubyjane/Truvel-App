@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import styles from './Information.module.scss'
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
 import { TypeLocation } from '@/types/place'
+import { FC } from 'react'
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
+import styles from './Information.module.scss'
 
 const Map: FC<{ location: TypeLocation }> = ({ location }) => {
 	const geoUrl = '/geoMap/custom.json'

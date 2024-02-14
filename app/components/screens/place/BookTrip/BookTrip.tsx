@@ -1,6 +1,5 @@
-import React from 'react'
-import styles from './BookTrip.module.scss'
 import { HiOutlineArrowLongRight } from 'react-icons/hi2'
+import styles from './BookTrip.module.scss'
 
 const BookTrip = () => {
 	return (

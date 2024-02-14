@@ -1,7 +1,7 @@
-import NextProgressBar from 'nextjs-progressbar'
-import { ToastContainer } from 'react-toastify'
 import { SessionProvider } from 'next-auth/react'
+import NextProgressBar from 'nextjs-progressbar'
 import AuthProvider from 'providers/AuthProvider/AuthProvider'
+import { ToastContainer } from 'react-toastify'
 
 import '@/assets/styles/globals.scss'
 import 'react-toastify/dist/ReactToastify.css'

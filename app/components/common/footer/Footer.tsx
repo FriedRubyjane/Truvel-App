@@ -1,12 +1,11 @@
-import { memo } from 'react'
-import { useRouter } from 'next/router'
-import styles from './Footer.module.scss'
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { memo } from 'react'
 import { IconType } from 'react-icons'
-import { MdOutlinePersonOutline, MdLogout } from 'react-icons/md'
-import { TbHome } from 'react-icons/tb'
-import { TbHeart } from 'react-icons/tb'
+import { MdLogout, MdOutlinePersonOutline } from 'react-icons/md'
+import { TbHeart, TbHome } from 'react-icons/tb'
+import styles from './Footer.module.scss'
 
 type TypeNavItem = {
 	label: string

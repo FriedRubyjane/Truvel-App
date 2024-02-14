@@ -1,9 +1,9 @@
+import { IPlace } from '@/types/place'
 import Link from 'next/link'
 import { FC, MouseEvent } from 'react'
-import styles from './PopularPlaces.module.scss'
-import { IPlace } from '@/types/place'
-import { urlFor } from '../../../../CreateClient'
 import { TbHeartMinus } from 'react-icons/tb'
+import { urlFor } from '../../../../CreateClient'
+import styles from './PopularPlaces.module.scss'
 
 const PlaceItem: FC<{
 	place: IPlace

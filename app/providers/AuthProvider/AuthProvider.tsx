@@ -1,6 +1,6 @@
-import { FC, PropsWithChildren } from 'react'
 import { TypeComponentAuthFields } from '@/types/auth'
 import dynamic from 'next/dynamic'
+import { FC, PropsWithChildren } from 'react'
 
 const DynamicCheckRole = dynamic(() => import('./CheckRole'), {
 	ssr: false,

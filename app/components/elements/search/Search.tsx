@@ -1,8 +1,8 @@
-import { memo, FC, useState, ChangeEvent } from 'react'
-import styles from './Search.module.scss'
-import { IPlace } from '@/types/place'
 import { TypeSetState } from '@/types/common'
+import { IPlace } from '@/types/place'
+import { ChangeEvent, FC, memo, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
+import styles from './Search.module.scss'
 
 interface ISearch {
 	setPlaces: TypeSetState<IPlace[]>

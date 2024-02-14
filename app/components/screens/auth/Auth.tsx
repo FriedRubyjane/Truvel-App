@@ -1,16 +1,16 @@
-import React, { FC, useState } from 'react'
 import Layout from '@/components/common/Layout'
+import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { IAuthFields } from './Auth.interface'
 import { MdAccountCircle } from 'react-icons/md'
 import { toast } from 'react-toastify'
+import { IAuthFields } from './Auth.interface'
 
-import { signIn } from 'next-auth/react'
 import { signUp } from 'next-auth-sanity/client'
+import { signIn } from 'next-auth/react'
 
+import { useRouter } from 'next/router'
 import stylesButton from '../place/BookTrip/BookTrip.module.scss'
 import styles from './Auth.module.scss'
-import { useRouter } from 'next/router'
 
 const Auth: FC = () => {
 	const [typeForm, setTypeForm] = useState<'login' | 'register'>('login')

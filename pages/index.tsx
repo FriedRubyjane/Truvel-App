@@ -1,14 +1,14 @@
-import { GetStaticProps, NextPage } from 'next'
 import Layout from '@/common/Layout'
-import { IPlace } from '@/types/place'
-import HeadingSection from '@/elements/home/headingSection/HeadingSection'
-import Search from '@/elements/search/Search'
 import Filters from '@/elements/filters/Filters'
+import HeadingSection from '@/elements/home/headingSection/HeadingSection'
 import PopularPlaces from '@/elements/home/popularPlaces/PopularPlaces'
+import Search from '@/elements/search/Search'
+import { IPlace } from '@/types/place'
+import { GetStaticProps, NextPage } from 'next'
+import { queries } from 'queries'
 import { useState } from 'react'
 import Meta from 'utils/meta'
 import { sanityClient } from '../app/CreateClient'
-import { queries } from 'queries'
 
 interface IHome {
 	initialPlaces: IPlace[]

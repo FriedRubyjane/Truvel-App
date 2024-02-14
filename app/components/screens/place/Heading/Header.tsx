@@ -1,8 +1,8 @@
-import { memo, FC } from 'react'
-import Favorites from './Favorites'
-import BackButton from './BackButton'
-import styles from './Header.module.scss'
 import { useSession } from 'next-auth/react'
+import { FC, memo } from 'react'
+import BackButton from './BackButton'
+import Favorites from './Favorites'
+import styles from './Header.module.scss'
 
 const Header: FC<{ _id: string }> = ({ _id }) => {
 	const { data } = useSession()

@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
 import { IPlace } from '@/types/place'
+import { useSession } from 'next-auth/react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { sanityClient } from '../../../CreateClient'
 import { queries } from '../../../queries'
-import { useSession } from 'next-auth/react'
 
 export const useFavorites = (placeId: string) => {
 	const { data } = useSession()

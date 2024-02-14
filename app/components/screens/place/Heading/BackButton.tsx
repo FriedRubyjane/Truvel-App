@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
 import Link from 'next/link'
-import styles from './Header.module.scss'
+import { FC } from 'react'
 import { BsChevronLeft } from 'react-icons/bs'
+import styles from './Header.module.scss'
 
 const BackButton: FC = () => {
 	return (

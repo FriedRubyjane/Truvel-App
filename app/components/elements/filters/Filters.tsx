@@ -1,8 +1,8 @@
-import { FC, useState } from 'react'
-import styles from './Filters.module.scss'
 import { TypeSetState } from '@/types/common'
 import { IPlace } from '@/types/place'
 import uniqBy from 'lodash/uniqBy'
+import { FC, useState } from 'react'
+import styles from './Filters.module.scss'
 
 interface IFilters {
 	setPlaces: TypeSetState<IPlace[]>

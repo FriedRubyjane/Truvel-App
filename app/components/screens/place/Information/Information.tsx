@@ -1,9 +1,9 @@
+import { IPlace } from '@/types/place'
 import { FC } from 'react'
 import { FaCalendar, FaMapMarkerAlt, FaStar } from 'react-icons/fa'
-import { IPlace } from '@/types/place'
+import { PortableText } from '../../../../CreateClient'
 import styles from './Information.module.scss'
 import Map from './Map'
-import { PortableText } from '../../../../CreateClient'
 
 const Information: FC<{ place: IPlace }> = ({ place }) => {
 	return (
